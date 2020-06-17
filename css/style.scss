@@ -1,0 +1,792 @@
+// color variable
+
+$mianColor:#7CC576;
+$GrayColor:#707070;
+$lightGrayColor:#B0B0B0;
+$linksColor:#4B647E;
+$ropotoMeduim:'Roboto-Meduim';
+$ropotoRegular:'Roboto-Regular';
+$ropotoThin:'Roboto-Thin';
+$ropotoBlack:'Roboto-Black';
+
+
+@mixin Braduis($r) {
+    border-radius: $r;
+    -webkit-border-radius: $r;
+    -moz-border-radius: $r;
+    -ms-border-radius: $r;
+    -o-border-radius: $r;
+}
+
+
+/* import fonts */
+@font-face{
+    font-family: 'Roboto-Meduim';
+    src: url(../fonts/Roboto-Medium.ttf);
+}
+
+@font-face{
+    font-family: 'Roboto-Regular';
+    src: url(../fonts/Roboto-Regular.ttf);
+}
+@font-face{
+    font-family: 'Roboto-Thin';
+    src: url(../fonts/Roboto-Thin.ttf);
+}
+
+@font-face{
+    font-family: 'Roboto-Black';
+    src: url(../fonts/Roboto-Black.ttf);
+}
+@font-face{
+    font-family: 'Lato-Bold';
+    src: url(../fonts/Lato-Bold.ttf);
+}
+
+*{
+    -webkit-box-sizing: border-box;
+    -moz-sizing: border-box;
+    box-sizing: border-box;
+  }
+
+  .navbar{
+    
+      background-color: transparent;
+      position:absolute;
+      width: 100%;
+      @media(max-width:991px) {
+        position:static;
+      }
+      .navbar-brand{
+          font-size: 41px!important;
+          font-family: $ropotoMeduim;
+          color: $mianColor!important;
+          &:hover{
+            color: $mianColor!important;
+          }
+          span{
+              color: $GrayColor!important;
+          }
+      }
+      a{
+        color:#fff!important;
+        font-size: 26px!important;
+        font-family: $ropotoRegular;
+        margin-right: 20px;
+        @media(max-width:991px){
+            color: $GrayColor!important;
+        }
+     }
+      form{
+        button{
+            background-color: $GrayColor;
+            color: #fff;
+            @include Braduis(10px);
+            width: 110px;
+            height: 65;
+            font-family: $ropotoMeduim;
+            font-size: 20px;
+        }
+    }
+  }
+
+//   start main section
+
+.main {
+    background-image: url(../images/main.png);
+    background-size: contain;
+    height: 800px;
+    background-repeat: no-repeat;
+    background-position: right;
+    display: flex;
+    justify-self: start;
+    align-items: center;
+    @media(max-width:850px){
+        background-size:cover;
+    }
+    .content{
+        width: 100%;
+        .welcome{
+            color: $lightGrayColor;
+            font-family: $ropotoMeduim;
+            font-size: 26px;
+            @media(max-width:1330px){
+                color: $GrayColor;
+            }
+            .we{
+                color: $mianColor;
+                @media(max-width:1330px){
+                    color: $GrayColor;
+                }
+            }
+            .care{
+                color: $GrayColor;
+            }
+        }
+        .how{
+            color: $mianColor;
+            font-size: 50px;
+            font-family: $ropotoThin;
+            margin-bottom: 0px;
+            @media(max-width:1330px){
+                color: $GrayColor;
+            }
+        }
+        h2{
+            color: $mianColor;
+            font-family: $ropotoBlack;
+            font-size: 50px;
+            @media(max-width:1330px){
+                color: $GrayColor;
+            }
+        }
+        .data{
+            color: $lightGrayColor;
+            margin: 31px 0px;
+            @media(max-width:1330px){
+                color: $GrayColor;
+            }
+        }
+        button{
+          background-color: $mianColor;
+          color: #fff;
+          @extend %button;
+          font-size: 19px;
+          font-family: $ropotoMeduim;
+          cursor: pointer;
+          @media(max-width:1330px){
+            background-color: $GrayColor;
+            box-shadow: 0px 11px 30px 0px rgba($mianColor, 0.15)!important;
+        }
+        @extend %transition;
+        &:hover{
+          opacity: .7;
+      }
+      &:focus{
+          border: none;
+          outline: none;
+      }
+        }
+    }
+    .play{
+       position: relative;
+       p{
+        position: absolute;
+        bottom: -40%;
+        left: 0px;
+        width: 122px;
+        height: 122px;
+        background-color: #fff;
+        box-shadow: 0px 11px 30px 0px rgba($mianColor, 0.15)!important;
+        border-radius: 50%;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        -ms-border-radius: 50%;
+        -o-border-radius: 50%;
+        line-height: 122px;
+        text-align: center;
+        cursor: pointer; 
+        @extend %transition;
+        border: 2px solid #fff;
+        &:hover{
+            border: 2px solid $mianColor;     
+      }
+      @media(max-width:1200px){
+        position: relative;
+        right: 50px;
+        left: 100px;
+     }
+     @media(max-width: 590px){
+        top: 110%;
+     }
+        span{
+           display: block;
+           border-left: 20px solid $mianColor;
+           border-top: 20px solid transparent;
+           border-bottom: 20px solid transparent;
+           cursor: pointer;
+           position: absolute;
+           top: 50%;
+           right: 30%;
+           transform: translate(-50%,-50%);
+           -webkit-transform: translate(-50%,-50%);
+           -moz-transform: translate(-50%,-50%);
+           -ms-transform: translate(-50%,-50%);
+           -o-transform: translate(-50%,-50%);
+}
+}
+    }
+}
+   
+
+//   start section deals
+
+.deals{
+    margin-top: 70px;
+    .title{
+        h2{
+            font-family: $ropotoMeduim;
+            font-size: 45px;
+            color: $GrayColor;
+            margin-bottom: 30px;
+        }
+        p{
+            color: $lightGrayColor;
+            font-size: 18px;
+            font-family: $ropotoRegular;
+            margin-bottom: 13px;
+        }
+        .line{
+            margin: auto;
+            display: block;
+            background-image: linear-gradient(to right, #fff,$mianColor);
+            height: 5px;
+            width: 250px;
+            margin-bottom: 185px;
+        }
+    }
+
+    .content{
+        margin-bottom: 198px;
+        background-color: $mianColor;
+        height: 608px;
+        @include Braduis(34px);
+        @extend %greenShadow;
+          position: relative;
+        .info{
+            position: relative;
+            top: -70px;
+           img{
+               height: 512px;
+           }
+              
+            h6{
+                margin-top: 40px;
+                font-family: $ropotoMeduim;
+                color: #fff;
+                font-size: 30px;
+            }
+            p{
+                font-family: $ropotoMeduim;
+                color: #fff;
+                font-size: 25px;
+            }
+        }
+    }
+}
+//   end section deals
+
+
+//   start section newborn
+.newBorn{
+    .title{
+        h2{
+            font-family: $ropotoMeduim;
+            font-size: 45px;
+            color: $GrayColor;
+            margin-bottom: 30px;
+        }
+        p{
+            color: $lightGrayColor;
+            font-size: 18px;
+            font-family: $ropotoRegular;
+            margin-bottom: 13px;
+        }
+        .line{
+            margin: auto;
+            display: block;
+            background-image: linear-gradient(to right, #fff,$mianColor);
+            height: 5px;
+            width: 250px;
+            margin-bottom: 93px;
+        }
+    }
+
+    .content{ 
+        margin-bottom: 35px;
+        h6{
+            font-family: $ropotoRegular;
+            color: $mianColor;
+            font-size: 25px;
+            margin-top: 16px;
+        }
+        p{
+            font-family: $ropotoRegular;
+            color: $lightGrayColor;
+            font-size: 16px;
+            margin-top: 19px;
+        }
+
+        .smallLine{
+            @extend %smallLine;
+        }
+}
+.block{
+    display: block;
+    height: 200px;
+    width: 100%;
+    @media(max-width:425px){
+        height: 0px;
+    }
+}
+}
+//   end section newborn
+
+// start section baby carrier
+
+.babyCarrier{
+    margin: 50px 0px 0px;
+    .content{
+        background-color: $mianColor;
+        height: 558px;
+        width: 100%;
+        position: relative;
+        border-radius: 0px 30px 146px 0px;
+        @media(max-width:800px) {
+            border-radius: 0px;
+            -webkit-border-radius: 0px;
+            -moz-border-radius: 0px;
+            -ms-border-radius: 0px;
+            -o-border-radius: 0px;
+}
+        .women{
+            position: absolute;
+            right: 50px;
+            bottom: 0;
+            z-index: 1;
+            @media(max-width:800px) {
+                right: 0px;
+            }
+        }
+        .cary{
+           position: absolute;
+            left: 5%;
+            top: 50%;
+           -webkit-transform: translate(-50%, -50%);
+           transform: translate(-50%, -50%);
+           z-index: 0;
+           max-height: 65%;
+    }
+}
+
+.info-content{
+   height: 100%;
+   width: 100%;
+   display: flex;
+   justify-content: start;
+   align-items: center;
+   padding: 20px;
+   .info{
+       h2{
+           font-size: 45px;
+           color: $GrayColor;
+           font-family: $ropotoMeduim;
+       }
+       .data{
+           color:$lightGrayColor ;
+           font-size: 18px;
+       }
+       .price{
+        font-size: 43px;
+        color: $mianColor;
+        font-family: $ropotoRegular;
+       }
+       button{
+           background-color: $mianColor;
+          @extend %button;
+          @extend %transition;
+          &:hover{
+            opacity: .7;
+        }
+        &:focus{
+            border: none;
+            outline: none;
+        }
+         
+     }
+  }
+ }
+
+}
+
+// end section baby carrier
+
+
+// start baby care
+.babyCare{
+    margin-top: 200px;
+    .title{
+        h2{
+            font-family: $ropotoMeduim;
+            font-size: 45px;
+            color: $GrayColor;
+            margin-bottom: 30px;
+        }
+        p{
+            color: $lightGrayColor;
+            font-size: 18px;
+            font-family: $ropotoRegular;
+            margin-bottom: 30px;
+        }
+        .line{
+            margin: auto;
+            display: block;
+            background-image: linear-gradient(to right, #fff,$mianColor);
+            height: 5px;
+            width: 250px;
+            margin-bottom: 64px;
+        }
+    }
+
+    .card{
+        margin-bottom: 64px;
+        @include Braduis(34px);
+        border: none;
+        box-shadow: 0px 11px 30px 0px rgba($lightGrayColor, 0.15);
+        img{
+            margin-bottom: 60px;
+        }
+        h5{
+         font-family: 'Lato-Bold';
+         font-size: 20px;
+         color: $GrayColor;
+        }
+        .date{
+            margin-bottom: 23px;
+            font-size: 15px;
+            color: $mianColor;
+            font-family: $ropotoRegular;
+        }
+        .card-text{
+          font-size: 15px;
+          font-family: $ropotoRegular;
+          color: $GrayColor;
+          margin-bottom: 25px;
+        }
+
+        img{
+            margin-bottom: 20px;
+        }
+   }  
+    .posts{
+        margin-top: 96px;
+        background-color: #F2F9F1;
+        font-size: 19px;
+        border: none;
+        color: $lightGrayColor;
+        padding: 17px 71px 18px 71px;
+        cursor: pointer;
+        @extend %transition;
+        &:hover{
+            background-color: $GrayColor;
+            color: #F2F9F1;
+        }
+        &:focus{
+            border: none;
+            outline: none;
+        }
+    }
+}
+// end baby care
+
+
+// start section since
+.since{
+ margin-top: 142px;
+ background-color: $mianColor;
+ background-size: cover;
+ position: relative;
+ background-image: url('../images/book.png');
+ background-size: cover;
+ background-repeat: no-repeat;
+ background-position: right;
+ margin-bottom: 117px;
+ .content{
+    padding: 76px 30px;
+    .line{
+        margin: auto;
+        display: block;
+        background-image: linear-gradient(to right, #fff,$mianColor);
+        height: 5px;
+        width: 250px;
+        margin-bottom: 65px;
+     }
+     .data{
+         font-size: 30px;
+         font-family: $ropotoThin;
+         color: #fff;
+     }
+     .book{
+         color: #fff;
+         font-family: $ropotoBlack;
+         font-size: 34px;
+     }
+ }
+}
+// end section since
+
+// start section reviews
+
+.reviews{
+    margin: 0px 0px 100px;
+    .title{
+        h2{
+            font-family: $ropotoMeduim;
+            font-size: 45px;
+            color: $GrayColor;
+            margin-bottom: 30px;
+        }
+        p{
+            color: $lightGrayColor;
+            font-size: 18px;
+            font-family: $ropotoRegular;
+            margin-bottom: 28px;
+        }
+        .line{
+            margin: auto;
+            display: block;
+            background-image: linear-gradient(to right, #fff,$mianColor);
+            height: 5px;
+            width: 250px;
+           margin-bottom: 132px;
+        }
+    }
+    .card{
+        margin: 10px auto;
+       @include Braduis(34px);
+       border: none;
+       width: 90%;
+       height: 90%;
+       box-shadow: 0px 0px 8px rgba($lightGrayColor, 0.9);
+       padding: 35px 20px ;
+       h6{
+           font-family: 'Lato-Bold';
+           font-size: 20px;
+           color: $GrayColor;
+       }
+       span{
+           font-size: 15px;
+           font-family: $ropotoRegular;
+           color: $mianColor;
+       }
+       .rate{
+           color: #FD6921;
+       }
+       p{
+           color: $GrayColor;
+           font-family: $ropotoRegular;
+           font-size: 15px;
+       }
+    }
+    .carousel-control-prev{
+        .icon{
+            display: block;
+           background-color: #fff;
+           box-shadow: 0px 0px 8px rgba($lightGrayColor, 0.9);
+           padding: 15px;
+           line-height: 15px;
+          @include Braduis(50%);
+          
+       .carousel-control-prev-icon{
+         background-image: url('../images/left.png');
+          width: 9px;
+          height: 14px;
+          }
+        }
+   
+
+    }
+.carousel-control-next{
+    .icon{
+      display: block;
+       background-color: #fff;
+       box-shadow: 0px 0px 8px rgba($lightGrayColor, 0.9);
+       padding: 13px 15px;
+       line-height: 15px;
+      @include Braduis(50%);
+      
+   .carousel-control-next-icon{
+     background-image: url('../images/right.png');
+      width: 9px;
+      height: 14px;
+      }
+    }
+
+ }
+}
+
+// start signUp section
+.signup{
+    .container{
+        @media (max-width: 991px){
+            max-width: 100%;
+        }
+    }
+    
+    .content{
+        padding: 50px;
+        background-color: $mianColor;
+        @include Braduis(34px);
+        @extend %greenShadow;
+        p{
+           font-size: 55px;
+           font-family: $ropotoThin; 
+           color: #DCF0DB;
+           @media(max-width:1198px) {
+            font-size: 45px;
+        }
+        }
+        h2{
+            font-weight: $ropotoBlack;
+            color: #fff;
+            font-size: 60px;
+        }
+        button{
+            box-shadow: 0px 11px 30px 0px rgba($GrayColor, 0.75);
+            margin-top: 50px;
+            @extend %button;
+            background-color: $GrayColor;
+            span{
+                font-size: 19px;
+                font-family: $ropotoMeduim;
+                color: #fff;
+            }
+            &:hover{
+                opacity: .7;
+            }
+            &:focus{
+                border: none;
+                outline: none;
+            }
+        }
+    }
+} 
+
+// start link section
+.links{
+    margin-top: 67px;
+ .content{
+     margin-top: 30px;
+    ul{
+         li{
+        margin-bottom: 21px;
+        padding-left: 30%;
+        color: $linksColor;
+        font-size: 20px;
+        font-family: $ropotoRegular;
+        @media(max-width:1198px) {
+            padding-left: 0%;
+        }
+         }
+         .first{
+          a{
+            margin-bottom: 31px;
+            font-size: 24px;
+            font-family: $ropotoRegular;
+            color: $GrayColor;
+          }
+        }
+     }
+     .rate{
+        color: #FD6921;
+        margin-bottom: 44px;
+        margin-top: 30px;
+     }
+     p{
+      font-family: $ropotoRegular;
+      font-size: 14px;
+      margin-bottom: 14px;
+      color: $GrayColor;
+      margin-bottom: 14px;
+     }
+     .social{
+         i{
+             text-align: center;
+            background-color: $mianColor;
+            width: 43px;
+             height: 43px;
+             color: #fff;
+             border-radius: 50%;
+             line-height: 43px;
+             font-size: 14px;
+             @extend %transition;
+             cursor: pointer;
+             &:hover{
+                 opacity: .7;
+             }
+            }
+           
+       }
+     }
+   }
+
+
+
+// start footer
+footer{
+    margin-top: 96px;
+    h2{
+        color: $mianColor;
+        font-size: 41px;
+        font-family: $ropotoMeduim;
+        span{
+            color: $GrayColor;
+            font-size: 41px;
+            font-family: $ropotoMeduim;
+        }
+    }
+    .line{
+        margin:33px auto 0px;
+        width:80px ;
+        height: 2px;
+        background-color: $mianColor;
+    }
+    p{
+        margin-top: 25px;
+        margin-bottom: 25px;
+        font-size: 16px;
+        font-family: $ropotoRegular;
+        color: $lightGrayColor;
+    }
+}
+
+
+
+
+// daplicated
+%largeLine{
+    background-image: linear-gradient(to right, #fff,$mianColor);
+    height: 5px;
+    width: 250px;
+    margin: auto;
+    display: block;
+}
+
+%smallLine{
+    background-image: linear-gradient(to right, #fff,$mianColor);
+    height: 4px;
+    width: 65px;
+    margin: auto;
+    display: block;
+}
+
+%greenShadow{
+  box-shadow: 0px 11px 30px 0px rgba($mianColor, 0.35);
+}
+
+%button{
+    color: #fff;
+    padding: 8px 15px;
+    border: none;
+    cursor: pointer;
+    @include Braduis(10px);
+    @extend %greenShadow;
+}
+
+%transition{
+    -webkit-transition:all .4s ease-in-out;
+    -moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -transition: all .4s ease-in-out;
+    }
+    
