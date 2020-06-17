@@ -83,6 +83,10 @@
   font-size: 20px;
 }
 
+.navbar form button:hover {
+  color: #fff;
+}
+
 .main {
   background-image: url(../images/main.png);
   background-size: contain;

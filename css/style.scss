@@ -86,6 +86,9 @@ $ropotoBlack:'Roboto-Black';
             height: 65;
             font-family: $ropotoMeduim;
             font-size: 20px;
+            &:hover{
+                color: #fff;
+            }
         }
     }
   }
