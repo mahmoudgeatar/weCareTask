@@ -84,7 +84,7 @@
 }
 
 .navbar form button:hover {
-  color: #fff;
+  color: #fff !important;
 }
 
 .main {
